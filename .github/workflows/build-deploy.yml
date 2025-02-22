@@ -32,8 +32,10 @@ jobs:
         path: target/*.jar
 
     - name: Push JAR to GitHub Releases
-      uses: ncipollo/release-action@v1
+      uses: softprops/action-gh-release@v1
       with:
-        tag: v1.0.${{ github.run_number }}
+        tag_name: ${{ github.run_number }}
         name: "Release ${{ github.run_number }}"
-        artifacts: target/*.jar
+        files: my-java-app/target/*.jar
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
