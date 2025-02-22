@@ -25,17 +25,20 @@ jobs:
       run: mvn clean package
       working-directory: ./sample2
 
+    - name: List files after build
+      run: ls -R ./sample2/target
+
     - name: Upload JAR as Artifact
       uses: actions/upload-artifact@v4
       with:
         name: my-java-app
-        path: target/*.jar
+        path: ./sample2/target/*.jar
 
     - name: Push JAR to GitHub Releases
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ github.run_number }}
         name: "Release ${{ github.run_number }}"
-        files: my-java-app/target/*.jar
+        files: ./sample2/target/target/*.jar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
