@@ -39,6 +39,6 @@ jobs:
       with:
         tag_name: ${{ github.run_number }}
         name: "Release ${{ github.run_number }}"
-        files: ./sample2/target/target/*.jar
+        files: ./sample2/target/*.jar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
