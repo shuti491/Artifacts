@@ -27,7 +27,7 @@ jobs:
     - name: Upload JAR as Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: my-java-app
+        name: my-dep-app
         path: target/*.jar
 
     - name: Push JAR to GitHub Releases
