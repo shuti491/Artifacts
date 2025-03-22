@@ -47,4 +47,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Download Release Asset
-      run: curl -L -o file.zip https://github.com/shuti491/Dependencies/releases/tag/30
+      run: |
+        mkdir -p lib
+        curl -L -o file.zip https://github.com/shuti491/Dependencies/releases/download/30/dep1.jar
