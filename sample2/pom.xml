@@ -11,12 +11,31 @@
            <maven.compiler.source>1.8</maven.compiler.source>
            <maven.compiler.target>1.8</maven.compiler.target>
      </properties>
+     <repositories>
+  <repository>
+    <id>github</id>
+    <url>https://maven.pkg.github.com/shuti491/Dependencies</url>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
       <dependencies>
            <dependency>
                <groupId>joda-time</groupId>
                <artifactId>joda-time</artifactId>
                <version>2.2</version>
            </dependency>
+       <dependency>
+  				<groupId>com.shr</groupId>
+ 				<artifactId>prjdep2</artifactId>
+ 				<version>1.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+                 <groupId>com.shr</groupId>
+ 				 <artifactId>prjdep3</artifactId>
+                 <version>1.0.1-SNAPSHOT</version>
+        </dependency>
        </dependencies>
        
         <build>
