@@ -63,7 +63,7 @@ jobs:
 
     - name: Publish to GitHub Packages
       run: mvn deploy -X
-      working-directory: ./${{ matrix.project }}
+      working-directory: ./sample2
       env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
