@@ -12,12 +12,18 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+
 	<distributionManagement>
-      <repository>
-        <id>github</id>
-        <url>https://maven.pkg.github.com/shuti491/Dependencies</url>
-       </repository>  
-    </distributionManagement>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/shuti491/Dependencies</url>
+		</repository>
+		<snapshotRepository>
+			<id>github-snapshots</id>
+			<url>
+				https://maven.pkg.github.com/shuti491/Dependencies</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
