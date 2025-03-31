@@ -12,17 +12,16 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+	<distributionManagement>
 
-	<repositories>
-  <repository>
-    <id>github-snapshots</id>
-    <url>https://maven.pkg.github.com/shuti491/Dependencies</url>
-    <snapshots>
-      <enabled>true</enabled>
-    </snapshots>
-  </repository>
-</repositories>
-
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/shuti491/Dependencies</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>joda-time</groupId>
