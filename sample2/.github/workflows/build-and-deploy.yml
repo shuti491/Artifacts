@@ -29,11 +29,14 @@ jobs:
       with:
         name: my-java-app
         path: target/*.jar
-
+    
     - name: Push JAR to GitHub Releases
       uses: ncipollo/release-action@v1
       with:
         tag: v1.0.${{ github.run_number }}
         name: "Release ${{ github.run_number }}"
         artifacts: target/*.jar
+
+     - name: Build with Maven
+      run: mvn test
 
