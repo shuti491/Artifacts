@@ -43,6 +43,10 @@ jobs:
       run: mvn clean package
       working-directory: ./sample2
 
+    - name: Run Maven Tests
+      working-directory: ./sample2
+      run: mvn test
+
     - name: List files after build
       run: ls -R ./sample2/target
 
