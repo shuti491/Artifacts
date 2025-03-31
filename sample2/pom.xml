@@ -12,6 +12,20 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+	    <!-- ✅ Added repositories section to resolve dependencies -->
+        <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/shuti491/Dependencies</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+       </repositories>
+	
 	<distributionManagement>
 		<repository>
 			<id>github</id>
@@ -28,21 +42,26 @@
 			<groupId>com.shr</groupId>
 			<artifactId>prjdep2</artifactId>
 			<version>1.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.shr</groupId>
 			<artifactId>prjdep3</artifactId>
 			<version>1.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+
 		</dependency>
 		<dependency>
 			<groupId>com.shr</groupId>
 			<artifactId>prjdep4</artifactId>
 			<version>1.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.shr</groupId>
 			<artifactId>prjdep5</artifactId>
 			<version>1.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
