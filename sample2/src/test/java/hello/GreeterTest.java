@@ -8,14 +8,20 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import org.junit.jupiter.api.Test;
+@Execution(ExecutionMode.CONCURRENT)
 
 class GreeterTest {
 
     @Test
-    void testSayHello() {
-        Greeter greeter = new Greeter();
+    void testSayHello() throws InterruptedException {
+    	Thread.sleep(5000);
+    	System.out.println("Shruti Running " + this.getClass().getSimpleName() +
+                " on " + Thread.currentThread().getName());   
+    	Greeter greeter = new Greeter();
         String result = greeter.sayHello();
         System.out.println(result);
         

@@ -4,14 +4,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
-
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.api.Disabled;
+@Execution(ExecutionMode.CONCURRENT)
 
 class HelloWorldTest {
 
     @Test
-    void testMainMethod() {
-        assertDoesNotThrow(() -> HelloWorld.main(new String[]{}), "Main method should run without exceptions");
+    void testMainMethod() throws InterruptedException {
+    	Thread.sleep(5000);
+    	System.out.println("Shruti Running " + this.getClass().getSimpleName() +
+                " on " + Thread.currentThread().getName());
+    	assertDoesNotThrow(() -> HelloWorld.main(new String[]{}), "Main method should run without exceptions");
     }
     @Test
     public void testConcatWithRegularInput() {
